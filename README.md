@@ -1,5 +1,7 @@
 # Advent of Code
 
+[![Travis (.com)](https://img.shields.io/travis/com/DaCurse/AoC?label=tests)](https://travis-ci.com/DaCurse/AoC)
+
 My solutions to [AoC](https://adventofcode.com/), organized to folders for each year.
 
 - [Advent of Code](#advent-of-code)
