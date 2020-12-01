@@ -24,7 +24,7 @@ export default async function getInputs(
   saveTo = join(process.cwd(), 'inputs', year.toString()),
   parseInputs = parseListOfNumbers
 ) {
-  const filePath = join(saveTo, `${day}.txt`);
+  const filePath = join(saveTo, `${day.toString().padStart(2, '0')}.txt`);
   if (existsSync(filePath)) {
     return parseInputs(readFileSync(filePath, 'utf-8'));
   }
