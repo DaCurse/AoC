@@ -1,10 +1,9 @@
 {
   "name": "aoc",
   "version": "1.0.0",
-  "description": "AoC 2020 solutions",
+  "description": "AoC solutions",
   "author": "DaCurse",
   "license": "GPL-3.0",
-  "main": "index.js",
   "type": "module",
   "repository": {
     "type": "git",
