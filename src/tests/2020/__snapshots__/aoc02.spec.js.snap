@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Day 2 solution Part one 1`] = `591`;
+exports[`Day 2 solution Part one: Find all passwords where a letter occurs within a given range 1`] = `591`;
+
+exports[`Day 2 solution Part two: Find all passwords where a letter is only in one of 2 given positions 1`] = `335`;
