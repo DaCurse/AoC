@@ -12,6 +12,7 @@ My solutions to [AoC](https://adventofcode.com/), organized to folders for each 
       - [Running all tests](#running-all-tests)
       - [Running tests for specific year](#running-tests-for-specific-year)
       - [Running specific test](#running-specific-test)
+      - [Updating snapshots](#updating-snapshots)
 
 ## Getting Started
 
@@ -67,4 +68,12 @@ yarn start {year}
 yarn start 2020/aoc01
 # OR
 yarn start {year}/aoc{day}
+```
+
+#### Updating snapshots
+
+Some tests use [snapshots](https://jestjs.io/docs/en/snapshot-testing) which compare the result to one stored in a snapshot file. You might want to update the snapshot when using different inputs.
+
+```sh
+yarn start --updateSnapshot
 ```
