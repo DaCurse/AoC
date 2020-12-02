@@ -1,4 +1,5 @@
 import { partOne, partTwo } from '../../solutions/2020/aoc01';
+import { product, sum } from '../../util/func';
 import getInputs from '../../util/inputs';
 
 describe('Day 1 solution', () => {
@@ -8,8 +9,8 @@ describe('Day 1 solution', () => {
     console.log('Day 1 Part 1 solution:', result);
 
     expect(inputs).toEqual(expect.arrayContaining(fluff));
-    expect(fluff[0] + fluff[1]).toEqual(2020);
-    expect(fluff[0] * fluff[1]).toEqual(result);
+    expect(fluff.reduce(sum)).toEqual(2020);
+    expect(fluff.reduce(product)).toEqual(result);
   });
 
   test('Part two: Find a triplet that sums to 2020', async () => {
@@ -18,7 +19,7 @@ describe('Day 1 solution', () => {
     console.log('Day 1 Part 2 solution:', result);
 
     expect(inputs).toEqual(expect.arrayContaining(fluff));
-    expect(fluff[0] + fluff[1] + fluff[2]).toEqual(2020);
-    expect(fluff[0] * fluff[1] * fluff[2]).toEqual(result);
+    expect(fluff.reduce(sum)).toEqual(2020);
+    expect(fluff.reduce(product)).toEqual(result);
   });
 });
