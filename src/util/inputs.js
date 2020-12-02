@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { parseListOfNumbers } from './parsers';
+import { parseListOfInts } from './parsers';
 
 const api = Axios.create({
   headers: {
@@ -13,16 +13,16 @@ const api = Axios.create({
  * Tries to parse and return inputs from cache, sending a request to the AoC
  * website if cache is not found
  * @param {number} day Problem day
- * @param {year} year AoC year
- * @param {string} saveTo Directory to save file in
  * @param {(raw: string) => unknown} parseInputs Function to parse inputs from
  * file/response
+ * @param {year} year AoC year
+ * @param {string} saveTo Directory to save file in
  */
 export default async function getInputs(
   day,
+  parseInputs = parseListOfInts,
   year = new Date().getFullYear(),
-  saveTo = join(process.cwd(), 'inputs', year.toString()),
-  parseInputs = parseListOfNumbers
+  saveTo = join(process.cwd(), 'inputs', year.toString())
 ) {
   const filePath = join(saveTo, `${day.toString().padStart(2, '0')}.txt`);
   if (existsSync(filePath)) {
