@@ -4,7 +4,7 @@
  * @param {string} raw List of strings
  */
 export function parseListOfStrings(raw) {
-  return raw.split('\n').filter((s) => s);
+  return raw.split(/\r?\n/).filter((s) => s);
 }
 
 /**
