@@ -14,7 +14,7 @@ export function partOne(inputs) {
       prev.add(input);
     } else {
       return {
-        // Returning the pair alongisde the result for propery testing
+        // Returning the pair alongisde the result for property testing
         fluff: [target - input, input],
         result: (target - input) * input,
       };
