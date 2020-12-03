@@ -1,4 +1,4 @@
-import { partOne } from '../../solutions/2020/aoc03';
+import { partOne, partTwo } from '../../solutions/2020/aoc03';
 import getInputs from '../../util/inputs';
 import { parseListOfStrings } from '../../util/parsers';
 
@@ -7,6 +7,14 @@ describe('Day 3 solution', () => {
     const inputs = await getInputs(3, parseListOfStrings);
     const result = partOne(inputs);
     console.log('Day 3 Part 1 solution:', result);
+
+    expect(result).toMatchSnapshot();
+  });
+
+  test('Part two: Multiply number of trees for multiple slopes', async () => {
+    const inputs = await getInputs(3, parseListOfStrings);
+    const result = partTwo(inputs);
+    console.log('Day 3 Part 2 solution:', result);
 
     expect(result).toMatchSnapshot();
   });
