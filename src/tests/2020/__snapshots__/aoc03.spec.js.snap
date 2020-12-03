@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day 3 solution Part one: Count all trees while following slope of right 3 and down 1 1`] = `156`;
