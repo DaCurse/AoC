@@ -1,5 +1,8 @@
 const splitRegex = /-|\s|: /;
 
+/**
+ * @param {string[]} inputs Array of policies
+ */
 export function partOne(inputs) {
   return inputs.reduce((acc, input) => {
     // Parse line using regex
@@ -12,6 +15,9 @@ export function partOne(inputs) {
   }, 0);
 }
 
+/**
+ * @param {string[]} inputs Array of policies
+ */
 export function partTwo(inputs) {
   return inputs.reduce((acc, input) => {
     // Parse line using regex
