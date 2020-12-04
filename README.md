@@ -23,7 +23,7 @@ Inputs need to be provided in the [inputs](/inputs) directory, with a directory 
 ```
 inputs/
 `-- 2020
-    `-- 1.txt
+    `-- 01.txt
 ```
 
 If an input for a test does not exist, it will try to download it from the AoC website which requires being authorized. You can provide a session token (found in your cookies on https://adventofcode.com/) by creating a `.env` file in the root directory with the contents:
