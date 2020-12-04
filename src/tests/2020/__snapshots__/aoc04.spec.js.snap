@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Day 4 solution Part one 1`] = `239`;
+exports[`Day 4 solution Part one: Count all passports with at least 7 fields 1`] = `239`;
+
+exports[`Day 4 solution Part two: Count all passports with valid fields and field values 1`] = `188`;
