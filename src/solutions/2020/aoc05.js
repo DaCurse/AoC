@@ -1,5 +1,3 @@
-// TODO: Finish docs
-
 const map = {
   B: '1',
   R: '1',
@@ -20,7 +18,21 @@ export function partOne(inputs) {
   return Math.max(...calcIDs(inputs));
 }
 
-// eslint-disable-next-line no-unused-vars
 export function partTwo(inputs) {
-  // TODO: Re-write a clean solution
+  const xor = (a, b) => a ^ b;
+  const ids = calcIDs(inputs);
+  const max = Math.max(...ids);
+  const min = Math.min(...ids);
+
+  return (
+    ids.reduce(xor) ^
+    Array(max)
+      .fill()
+      .map((_, i) => i + 1)
+      .reduce(xor) ^
+    Array(min - 1)
+      .fill()
+      .map((_, i) => i + 1)
+      .reduce(xor)
+  );
 }
