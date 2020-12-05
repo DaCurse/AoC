@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day 5 solution Part one: Find the highest ID seat 1`] = `896`;
+
+exports[`Day 5 solution Part one: Find your seat (The missing seat) 1`] = `659`;
