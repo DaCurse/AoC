@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Day 6 solution Part one: Find the sum of questions for each group 1`] = `6633`;
+
+exports[`Day 6 solution Part one: Find the sum of unanimous questions for each group 1`] = `3202`;
