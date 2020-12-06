@@ -8,6 +8,14 @@ export function parseListOfStrings(raw) {
 }
 
 /**
+ * Parses a list of groups seperated each by a blank line
+ * @param {string} raw List of groups
+ */
+export function parseListOfGroups(raw) {
+  return raw.split(/(?:\r?\n){2}/).filter((s) => s);
+}
+
+/**
  * Parses list of strings to an array of integers
  * @param {string} raw List of strings
  */

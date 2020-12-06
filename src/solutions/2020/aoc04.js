@@ -1,10 +1,12 @@
+import { parseListOfGroups } from '../../util/parsers';
+
 /**
  * This abomination parses a list of passports (huge string) seperated by blank lines into objects with keys/values
  * being each field and it's respective value
  * @param {string} raw Raw input (List of passports)
  */
 export function parsePassports(raw) {
-  return raw.split('\n\n').map((passport) => {
+  return parseListOfGroups(raw).map((passport) => {
     const parts = passport.split(/\s/);
     return parts.reduce((obj, part) => {
       const [key, value] = part.split(':');
