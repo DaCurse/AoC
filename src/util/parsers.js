@@ -16,6 +16,15 @@ export function parseListOfGroups(raw) {
 }
 
 /**
+ * Parses a list of groups seperated by a blank line into an array with an array
+ * for each group containing each line in the group
+ * @param {raw} raw List of line groups
+ */
+export function parseListOfLineGroups(raw) {
+  return parseListOfGroups(raw).map(parseListOfStrings);
+}
+
+/**
  * Parses list of strings to an array of integers
  * @param {string} raw List of strings
  */

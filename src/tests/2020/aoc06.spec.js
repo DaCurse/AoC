@@ -1,6 +1,6 @@
 import { partOne, partTwo } from '../../solutions/2020/aoc06';
 import getInputs from '../../util/inputs';
-import { parseListOfGroups } from '../../util/parsers';
+import { parseListOfGroups, parseListOfLineGroups } from '../../util/parsers';
 
 describe('Day 6 solution', () => {
   test('Part one: Find the sum of questions for each group', async () => {
@@ -12,7 +12,7 @@ describe('Day 6 solution', () => {
   });
 
   test('Part one: Find the sum of unanimous questions for each group', async () => {
-    const inputs = await getInputs(6, parseListOfGroups);
+    const inputs = await getInputs(6, parseListOfLineGroups);
     const result = partTwo(inputs);
     console.log('Day 6 Part 2 solution:', result);
 
