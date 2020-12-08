@@ -26,13 +26,7 @@ export function partTwo(inputs) {
 
   return (
     ids.reduce(xor) ^
-    Array(max)
-      .fill()
-      .map((_, i) => i + 1)
-      .reduce(xor) ^
-    Array(min - 1)
-      .fill()
-      .map((_, i) => i + 1)
-      .reduce(xor)
+    Array.from({ length: max }, (_, i) => i + 1).reduce(xor) ^
+    Array.from({ length: min - 1 }, (_, i) => i + 1).reduce(xor)
   );
 }
